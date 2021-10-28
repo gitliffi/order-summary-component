@@ -13,12 +13,12 @@ function OrderSummary() {
           </p>
         </div>
         <div className="card-buttons">
-          <p className="card-subscription">
-            Annual Plan $59.99/year
+          <div className="card-subscription">
+            <p className="card-subscription-text">Annual Plan $59.99/year</p>
             <a className="card-subscription-button" href="#">
               Change
             </a>
-          </p>
+          </div>
           <a className="card-payment-button" href="#">
             Proceed to Payment
           </a>
