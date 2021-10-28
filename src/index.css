@@ -8,15 +8,15 @@ body {
   background-repeat: repeat-x;
   background-size: auto;
   background-color: hsl(225, 100%, 94%);
-  background-blend-mode: darken;
+  background-blend-mode: none;
   overflow:hidden;
 }
 
 .card {
   display: grid;
   grid-template-columns: 450px;
-  grid-template-rows: 210px 210px 210px;
-  grid-template-areas: "image" "body" "buttons";
+  grid-template-rows: 210px 420px;
+  grid-template-areas: "image" "body";
 
   font-family: 'Red Hat Display', sans-serif;
   border-radius: 18px;
@@ -33,13 +33,29 @@ body {
 
 .card-body {
   grid-area: body;
+  display: grid;
+  grid-template-columns: 350px;
+  grid-template-rows: 150px 100px 50px 50px;
+  grid-template-areas: "text" "subscription" "proceed" "cancel";
+  row-gap: 10px;
+
+  padding: 10px 50px 10px 50px;
 }
 
-.card-buttons {
-  grid-area: buttons;
+h2 {
+  color: hsl(223, 47%, 23%);
+  font-weight: 900;
+}
+
+.card-body-paragraph {
+  line-height: 19pt;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%)
 }
 
 .card-subscription {
+  grid-area: subscription;
   display: grid;
-  background-color: gray;
+  background-color: hsl(225, 100%, 98%);
 }
