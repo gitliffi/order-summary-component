@@ -36,10 +36,18 @@ body {
   display: grid;
   grid-template-columns: 350px;
   grid-template-rows: 150px 100px 50px 50px;
-  grid-template-areas: "text" "subscription" "proceed" "cancel";
+  grid-template-areas: "card-text" "subscription" "proceed" "cancel";
   row-gap: 10px;
 
   padding: 10px 50px 10px 50px;
+}
+
+.card-body-paragraph {
+  grid-area: card-text;
+  line-height: 19pt;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%)
 }
 
 h2 {
@@ -47,15 +55,60 @@ h2 {
   font-weight: 900;
 }
 
-.card-body-paragraph {
-  line-height: 19pt;
-  font-size: 16px;
-  font-weight: 500;
-  color: hsl(224, 23%, 55%)
-}
-
 .card-subscription {
   grid-area: subscription;
   display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "subscription-logo subscription-text subscription-button";
+
   background-color: hsl(225, 100%, 98%);
+  border-radius: 15px;
+  
+}
+
+.subscription-logo {
+  grid-area: subscription-logo;
+  display: block;
+  margin: auto;
+  
+}
+
+.subscription-text {
+  grid-area: subscription-text;
+  text-align: left;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+h4 {
+  margin-bottom: 5px;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+}
+
+.subscription-text p {
+  margin-top: 0;
+  margin-bottom: 25px;
+  color:hsl(224, 23%, 55%);
+}
+
+.subscription-button {
+  grid-area: subscription-button;
+  font-weight:700;
+  color: hsl(223, 47%, 23%);
+  margin: auto auto auto 0;
+}
+
+.subscription-button a:hover {
+  filter: brightness(150%);
+  text-decoration: none;
+}
+
+.proceed {
+  grid-area: proceed;
+}
+
+.cancel {
+  grid-area: cancel;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import musicLogo from "./icon-music.svg";
 
 function OrderSummary() {
   return (
@@ -14,11 +15,18 @@ function OrderSummary() {
             </p>
           </div>
           <div className="card-subscription">
-            <img src="./images/icon-music.svg"></img>
-            <p className="card-subscription-text">Annual Plan $59.99/year</p>
-            <a className="card-subscription-button" href="#">
-              Change
-            </a>
+            <div className="subscription-logo">
+              <img src={musicLogo} alt="music logo" />
+            </div>
+            <div className="subscription-text">
+              <h4>Annual Plan</h4>
+              <p>$59.99/year</p>
+            </div>
+            <div className="subscription-button">
+              <a className="card-subscription-button" href="#">
+                Change
+              </a>
+            </div>
           </div>
           <div className="proceed">
             <a className="card-payment-button" href="#">
